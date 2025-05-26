@@ -1,0 +1,88 @@
+import walmart from './assets/icons/spark-icon.svg'
+import phone from './assets/icons/image.png'
+import hamburger from './assets/icons/hamburger.svg'
+export default function App() {
+  const items=['Get it fast','My Items','Memorial','Dinner Solutions','Pharmacy Delivery',
+    "Father's Day",'Graduation','New Arrivals','Auto Services', 'Only At Walmart ','Registry','Walmart +']
+    
+  return (
+    <>
+      <header className='flex flex-col fixed w-full'>
+        <nav className=" bg-blue-600 h-20 flex gap-6 px-7 py-9 items-center  text-white">
+          <img src={hamburger} alt='hamburger' className='w-7 sm:hidden'/>
+          <img src={walmart} alt="icon" className='w-10 h-10 '/>
+
+          <div className=' flex p-1 gap-3 items-center bg-black bg-opacity-45 rounded-full hover:bg-opacity-65 sm:flex '>
+            <div>
+              <img src={phone} alt="phone-image" className='w-8' />
+            </div>
+            <div className='flex flex-col p-0'>
+              <span className='font-bold'>How do you want your items?</span>
+              <span className='text-sm'>Sacramento, 95829 .Sacremento Supe...</span>
+            </div>
+          </div>
+
+          <div className=' flex relative flex-grow sm:flex-shrink'>
+            <input type="text" placeholder='Search everything at Walmart online in store' className='px-5
+           placeholder-blue-800 w-96 h-12 rounded-full flex-grow text-black sm:flex-shrink' />
+           <button className='absolute right-2 bottom-2 h-8 w-8 rounded-full bg-blue-950 items-center'>🔍</button>
+          </div>
+
+          <div className='flex gap-7'>
+            <span className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full items-center hidden sm:flex '>Reorder My items</span>
+            <span className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full items-center hidden sm:flex'>Sign In Account</span>
+            <span className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full items-center text-2xl'> 🛒</span>
+          </div>
+
+        </nav>
+
+        <div className=' bg-gray-200 flex  py-3 px-6 text-blue-800'>
+          <div className=' flex gap-10 items-center text-blue-900 font-bold text-sm'>
+            <span className='hover:rounded-full border border-transparent hover:border-blue-500 cursor-pointer p-2'>Departments</span>
+            <span className='hover:rounded-full border border-transparent hover:border-blue-500 cursor-pointer p-2'>Services</span>
+            <span>|</span>
+          </div>
+          <ul className='flex gap-5 mx-5 text-sm items-center'>{items.map((item,index)=><li className='list-none hover:underline cursor-pointer' key={index}>{item}</li>)}</ul>
+        </div>
+
+
+        
+      </header>
+      <div className='py-[85px] px-4 font-mono text-green-600'>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ipsa unde, dolorem officia possimus aspernatur eius? Tempore doloremque fugiat aperiam aliquid. Quibusdam iste nemo ea cumque veniam officiis cum fugit.
+        Alias voluptatem, aut inventore veritatis aspernatur, voluptatibus delectus, autem odio itaque possimus impedit! Sunt nulla iste necessitatibus nobis adipisci, blanditiis voluptatem explicabo pariatur praesentium velit laboriosam temporibus veritatis aperiam dicta!
+        Atque, autem exercitationem molestiae illo magnam quaerat alias commodi maiores quod architecto explicabo perferendis laudantium temporibus mollitia facere, fugiat porro deserunt consequatur quis tenetur ex veritatis, vitae sit doloremque? Excepturi!
+        Quisquam in facilis, ipsam aperiam mollitia, minima quae tempora id eius nihil excepturi. Ex, ducimus dolorem sapiente unde architecto ad aut eveniet facilis sit aperiam debitis exercitationem, molestiae saepe voluptates!
+        Eaque doloremque magni assumenda. Excepturi vero atque sit ab quibusdam veniam quisquam aut placeat, ipsa sed rem, molestiae sunt. Dignissimos, eius sequi! Laborum error dolorem excepturi repellendus vel, ad dignissimos.
+        Eos ut beatae ad, sapiente placeat, commodi officiis quos, similique deleniti odit error atque nobis quas facilis culpa suscipit tempora. Hic facere cupiditate aut labore omnis eveniet enim ratione alias!
+        Illo saepe atque, vitae eius nam dolor nisi deleniti! Vitae culpa molestiae incidunt voluptatibus minima veniam tempora molestias fuga, explicabo, rerum quasi? Doloribus, maxime nobis. Eaque odio corporis eligendi nostrum?
+        Magni nam architecto saepe magnam provident dignissimos eligendi dolores explicabo laboriosam sapiente voluptate, asperiores rerum. Dolorem ipsam, maiores incidunt ex molestiae in nulla officia tempora tempore? Quae exercitationem delectus similique.
+        Tempore facilis laboriosam exercitationem, facere quasi nihil qui itaque pariatur vitae. Eum facere eveniet explicabo incidunt ratione illum soluta! Doloremque ipsa eveniet expedita quaerat a corrupti neque ea ullam odio!
+        Modi provident nam ex vel atque magnam, est distinctio laudantium! Culpa ab quidem assumenda. Nemo obcaecati totam alias aliquam culpa nobis deleniti rerum, beatae quisquam dolore adipisci sapiente exercitationem a.
+        Reprehenderit incidunt libero, numquam praesentium quas minus fugiat sunt omnis doloribus tenetur rem. Minima nemo quos consectetur laboriosam quo, id autem molestias voluptas voluptates aut ut suscipit distinctio cumque consequatur!
+        Soluta iure voluptatibus quisquam nam saepe voluptates, officia numquam dolores pariatur amet impedit voluptas, ducimus voluptate hic ea illum libero ipsa molestiae. Laboriosam consequuntur at repudiandae mollitia soluta eius explicabo!
+        Asperiores quisquam ipsam, neque incidunt repellendus necessitatibus molestiae fugiat totam numquam corporis obcaecati quibusdam fuga nesciunt esse aspernatur provident illum natus saepe dicta veniam! Non voluptates possimus laudantium reprehenderit eius.
+        Inventore necessitatibus libero neque, ullam beatae tempora molestias aliquid nemo non, labore quod voluptatum quibusdam sit laboriosam rerum commodi culpa similique quaerat unde? Neque harum asperiores, maiores earum autem tempora.
+        Magni vero, quis ratione tempora ullam rem, est soluta ex dolor molestias, quam quibusdam commodi cupiditate magnam cumque eum repudiandae dolores unde maiores quas eveniet illo. Vero est sint et!
+        Soluta, amet ea voluptatum aliquid ut corporis voluptate, provident aut aspernatur consequuntur odit modi harum impedit maiores libero velit saepe magni eligendi voluptatibus ullam repellat? Velit tempore laboriosam nulla labore.
+        Quam ipsa sequi illo, doloremque nulla, ad repellendus similique iste voluptatibus quis excepturi error eum autem suscipit, recusandae impedit! Repudiandae similique labore placeat perspiciatis amet cumque quas quibusdam molestiae nam?
+        Quam eaque assumenda quibusdam unde perferendis voluptate consequatur sit, at debitis. Alias ullam velit nisi non temporibus illum incidunt placeat cupiditate eos officia. Ab praesentium placeat eius, ratione labore nihil.
+        Id iste, beatae eos, consectetur recusandae laborum sed culpa rerum quidem sequi optio nobis iure voluptates repudiandae ipsam. Nobis debitis eaque aliquam, labore excepturi ad perspiciatis at autem totam sapiente?
+        Voluptatum a nesciunt dolor, cum temporibus eius optio voluptatibus at deserunt delectus omnis quaerat incidunt nam similique ipsa repudiandae! Neque dicta nihil id nam laboriosam dolorum praesentium enim adipisci sint.
+        Quod, corporis? Id delectus quasi excepturi dolorum consectetur. Minima accusamus ut impedit asperiores nobis illo assumenda maxime amet corrupti itaque, natus doloremque facilis similique. Neque, soluta architecto? Sequi, totam dolores!
+        Facere culpa corrupti nesciunt suscipit quis officiis maiores omnis quibusdam. Dolor unde voluptas recusandae corporis pariatur dolores quis illum ducimus, at dolore laudantium culpa aperiam asperiores autem? Unde, quia dolore?
+        Quisquam voluptatibus at a, delectus fuga magnam ipsum cum nemo incidunt minus eaque consectetur qui deserunt facilis laborum debitis nam culpa. Excepturi libero, qui vel dignissimos dolor suscipit laborum quisquam.
+        Quae aperiam iste libero ipsam provident impedit minus quia necessitatibus. Necessitatibus aperiam voluptatum a laudantium doloremque reiciendis debitis asperiores, beatae illum quos autem placeat ipsum illo velit id eaque magnam.
+        Corporis fuga obcaecati, suscipit mollitia reiciendis fugit tempora est eveniet ipsam vero sed consequatur dicta perspiciatis tempore cum. Rerum, ipsum dolores debitis nisi possimus numquam? Doloribus illo quod quam ea?
+        Quisquam numquam corporis rerum vero, voluptate quos commodi inventore odit delectus sit neque accusamus natus assumenda modi? A doloribus dolores repellendus quos quibusdam expedita, recusandae impedit ex ducimus suscipit ratione!
+        Saepe, laboriosam excepturi incidunt tenetur nam asperiores impedit? Asperiores est vero, nisi natus eos, omnis rerum minima corporis expedita cupiditate neque excepturi, assumenda eveniet magnam voluptates quod minus debitis eum.
+        Ipsum quam blanditiis, quae nobis magnam officia dicta, unde nesciunt minima perferendis eveniet, enim officiis? Fugiat unde cumque rem, earum, veritatis culpa ad eum laudantium fugit consequatur deleniti quia ab.
+        Adipisci, quidem expedita facere sunt voluptate repudiandae amet quis officia. Veritatis perferendis tenetur rerum eos illo inventore cupiditate esse. Voluptatibus hic provident esse laudantium nobis illum asperiores nulla architecto consequuntur?
+        Veritatis consectetur itaque natus, voluptate nesciunt quibusdam, error quos, at labore iure sit. Ipsum vitae quibusdam tempora ipsam repellendus aspernatur suscipit sapiente facere cumque? Enim nostrum voluptate maxime tenetur quis.
+        Necessitatibus, optio ipsam expedita accusantium, nihil debitis cum dolor quis minima dolore corrupti earum laudantium error ut perspiciatis in officiis quae. Quos sint tempore sequi molestiae quibusdam architecto voluptate libero!
+        Deleniti cum, repudiandae obcaecati recusandae quas ipsam optio assumenda neque excepturi earum. Aspernatur, dolorum harum nam fuga doloribus est nisi ab. Consectetur fuga aut tenetur voluptates, earum impedit debitis dolores?
+        Dolore impedit id assumenda mollitia officiis voluptatum corporis eos libero odit. Molestias minima, quidem quas vel incidunt laborum.</p>
+      </div>
+
+     
+    </>
