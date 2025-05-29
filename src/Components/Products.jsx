@@ -2,8 +2,49 @@ import React from 'react';
 import shoe from '../assets/images/shoe4.svg'
 import LoginPrompt from './LoginPrompt';
 import heart from '../assets/icons/heart.png'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import butterfly from '../assets/images/butterfly.png'
 
 const Contents = () => {
+  const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 20
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 11
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 5
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 3
+  }
+};
+const less = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 10
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 6
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 3
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 2
+  }
+};
 
   return (
 
@@ -36,11 +77,6 @@ const Contents = () => {
 
           </div>
         </div>
-            
-
-
-
-
       </div>
 
 
@@ -51,16 +87,20 @@ const Contents = () => {
           <span className='text-xs underline cursor-pointer'>view all</span>
         </div>
 
-        <div className="flex gap-6 px-3 overflow-x-auto whitespace-nowrap scrollbar-hide">
+        <div>
+          <Carousel responsive={responsive} itemClass="px-2">
           {Array(15).fill(0).map((_, i) => (
+            
             <div
               key={i}
               className="rounded-md flex-shrink-0 flex flex-col items-center gap-4 w-24 cursor-pointer "
             >
-              <img className="w-20" src={shoe} alt={`Grocery ${i + 1}`} />
+              <img className="w-full" src={shoe} alt={`Grocery ${i + 1}`} />
               <span className="text-xs">Grocery</span>
             </div>
+            
           ))}
+          </Carousel>
         </div>
       </div>
 
@@ -71,21 +111,23 @@ const Contents = () => {
           <span className='text-xs underline cursor-pointer'>view all</span>
         </div>
 
-        <div className="flex gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide">
+        <div>
+          <Carousel responsive={less} itemClass='px-2'>
           {Array(15).fill(0).map((_, i) => (
             <div
               key={i}
-              className="rounded-md flex-shrink-0 h-full flex flex-col items-center gap-4 size-48  cursor-pointer relative"
+              className="rounded-md flex-shrink-0 h-full flex flex-col items-start gap-4 size-47  cursor-pointer relative "
             >
-              <img className="object-cover" src={shoe} alt={`Grocery ${i + 1}`} />
+              <img className="object-cover" src={butterfly} alt={`Grocery ${i + 1}`} />
               <div className='absolute top-2 right-2 bg-white rounded-full '><img src={heart} className='size-7'/></div>
               <div className='flex flex-col items-start gap-2 pb-1'>
-                <span className=' font-bold'>Now $2.63</span>
-                <span className='text-sm text-wrap'>Nike black and white combo shoe in the what the hell </span>
+                <span className=' font-bold'>Now $203</span>
+                <span className='text-sm text-wrap'>Premium golden multiple butterfly  </span>
                 <button className='ring-1 ring-black px-3 py-1 rounded-full hover:ring-2 text-sm font-bold'>+ Add</button>
               </div>
             </div>
           ))}
+          </Carousel>
         </div>
       </div>
 

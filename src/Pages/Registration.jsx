@@ -1,6 +1,6 @@
 import { list } from 'postcss'
 import walmart from '/src/assets/icons/spark-icon.svg'
-import RegistrationFooter from './RegistrationFooter'
+import RegistrationFooter from '../Components/RegistrationFooter'
 
 const Registration = () => {
   return (
