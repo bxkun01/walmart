@@ -5,6 +5,7 @@ import heart from '../assets/icons/heart.png'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import butterfly from '../assets/images/butterfly.png'
+import categories from '../Constants/category.json'
 
 const Contents = () => {
   const responsive = {
@@ -88,18 +89,18 @@ const less = {
         </div>
 
         <div>
-          <Carousel responsive={responsive} itemClass="px-2">
-          {Array(15).fill(0).map((_, i) => (
+          <Carousel infinite={true} responsive={responsive} itemClass="px-2">
+          {categories.map((category)=>
             
             <div
-              key={i}
+              key={category.id}
               className="rounded-md flex-shrink-0 flex flex-col items-center gap-4 w-24 cursor-pointer "
             >
-              <img className="w-full" src={shoe} alt={`Grocery ${i + 1}`} />
-              <span className="text-xs">Grocery</span>
+              <img className="w-full" draggable="false" src={category.image_url} />
+              <span className="text-xs whitespace-nowrap">{category.category}</span>
             </div>
             
-          ))}
+          )}
           </Carousel>
         </div>
       </div>
@@ -118,7 +119,7 @@ const less = {
               key={i}
               className="rounded-md flex-shrink-0 h-full flex flex-col items-start gap-4 size-47  cursor-pointer relative "
             >
-              <img className="object-cover" src={butterfly} alt={`Grocery ${i + 1}`} />
+              <img className="object-cover" src={butterfly} draggable="false" alt={`Grocery ${i + 1}`} />
               <div className='absolute top-2 right-2 bg-white rounded-full '><img src={heart} className='size-7'/></div>
               <div className='flex flex-col items-start gap-2 pb-1'>
                 <span className=' font-bold'>Now $203</span>

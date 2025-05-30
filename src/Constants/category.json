@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "category": "Book",
+    "image_url": "src/assets/photos/apothecary.png"
+  },
+  {
+    "id": 2,
+    "category": "Tech",
+    "image_url": "src/assets/photos/canon.png"
+  },
+  {
+    "id": 3,
+    "category": "Food",
+    "image_url": "src/assets/photos/cadbury.png"
+  },
+    {
+    "id": 4,
+    "category": "Grocery",
+    "image_url": "src/assets/photos/grocery.png"
+  },
+    {
+    "id": 5,
+    "category": "Beauty",
+    "image_url": "src/assets/photos/beauty.png"
+  },
+      {
+    "id": 6,
+    "category": "Fashion",
+    "image_url": "src/assets/photos/fashion.png"
+  },
+      {
+    "id": 7,
+    "category": "Home",
+    "image_url": "src/assets/photos/home.png"
+  },    {
+    "id": 8,
+    "category": "Toys",
+    "image_url": "src/assets/photos/toys.png"
+  },
+      {
+    "id": 9,
+    "category": "Health & Welness",
+    "image_url": "src/assets/photos/health&welness.png"
+  },
+      {
+    "id": 10,
+    "category": "Home Improvement",
+    "image_url": "src/assets/photos/brush.png"
+  },
+        {
+    "id": 11,
+    "category": "Personal Care",
+    "image_url": "src/assets/photos/personalCare.png"
+  },
+          {
+    "id": 12,
+    "category": "Auto & tires",
+    "image_url": "src/assets/photos/auto&tires.png"
+  }
+]
