@@ -9,42 +9,50 @@ import login from '../assets/icons/login.png'
 import Search from './Search'
 import Sidebar from './Sidebar'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import chevronUp from '../assets/icons/chevron-up.png'
+import chevronDown from '../assets/icons/chevron-down.png'
 
-const Nav = () => {
+const Nav = ({toggleSidebar}) => {
   const items = ['Get it fast', 'My Items', 'Memorial', 'Dinner Solutions', 'Pharmacy Delivery',
     "Father's Day", 'Graduation', 'New Arrivals', 'Auto Services', 'Only At Walmart ', 'Registry', 'Walmart +']
 
-  const [showSidebar, setIsOpen] = useState(false)
 
-  function handleSidebar() {
-    setIsOpen(!showSidebar)
+
+  const [openLocationCard, setLocationCard] = useState(false)
+
+  function handleLocationCart() {
+    setLocationCard(() => !openLocationCard)
   }
+
+
 
   return (
     <>
-      {showSidebar && (
-        <Sidebar />
-       
-      )}
 
-      <header className={`flex flex-col fixed top-0 w-full z-[9999] bg-white transition-all duration-300 ${showSidebar ? 'ml-72' : ''}`}>
+      <header className='flex flex-col fixed top-0 w-full z-[9999]'>
 
         <nav className="bg-blue-600 h-20 flex gap-6 px-4 py-9 items-center text-white">
+
           <img
             src={hamburger}
             alt='hamburger'
             className='w-5 hidden max-sm:max-lg:flex cursor-pointer'
-            onClick={handleSidebar}
+            onClick={toggleSidebar}
           />
-          <img src={walmart} alt="icon" className='w-7' />
+          <Link to='/'><img src={walmart} alt="icon" className='w-7' /></Link>
 
-          <div className='flex p-1 gap-3 items-center bg-black bg-opacity-45 rounded-full hover:bg-opacity-65 max-sm:hidden max-lg:hidden'>
+          <div className='flex p-1 gap-3 items-center bg-black bg-opacity-45 rounded-full hover:bg-opacity-65 max-sm:hidden max-lg:hidden px-2'>
             <img src={phone} alt="phone-image" className='w-8' />
-            <div className='flex flex-col p-1'>
-              <span className='font-bold text-sm'>How do you want your items?</span>
-              <span className='text-xs'>Sacramento, 95829 .Sacremento Supe...</span>
+            <div className='flex items-center'>
+              <div className='flex flex-col p-1'>
+                <span className='font-bold text-sm'>How do you want your items?</span>
+                <span className='text-xs'>Sacramento, 95829 .Sacremento Supe...</span>
+              </div>
+              <button className='text-2xl' onClick={handleLocationCart}><img src={openLocationCard ? chevronUp : chevronDown} className='object-contain w-5' /></button>
             </div>
           </div>
+
 
           <Search />
 
@@ -58,9 +66,11 @@ const Nav = () => {
 
             <div className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full items-center hidden sm:flex cursor-pointer gap-2'>
               <img src={login} alt='login-icon' className='size-4' />
-              <div className='flex flex-col'>
-                <span className='text-xs'>Sign In</span><span className='font-bold text-sm'>Account</span>
-              </div>
+              <Link to='/login'>
+                <div className='flex flex-col'>
+                  <span className='text-xs'>Sign In</span><span className='font-bold text-sm'>Account</span>
+                </div>
+              </Link>
             </div>
 
             <div className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full cursor-pointer space-y-1 relative'>
@@ -81,13 +91,13 @@ const Nav = () => {
           <span className='text-xs'>Sacramento,95829</span>
         </div>
 
-        <div className='bg-gray-50 flex px-6 text-xs text-blue-800 space-x-4 overflow-x-auto whitespace-nowrap lg:overflow-visible relative lg:py-1 scrollbar-hide'>
+        <div className='bg-blue-50 flex px-6 text-xs text-blue-800 space-x-4  lg:py-1 '>
           <div className='flex gap-5 items-center text-blue-900 font-bold text-sm '>
             <Department />
             <Services />
             <span>|</span>
           </div>
-          <ul className='flex gap-5 mx-5 items-center'>
+          <ul className='flex gap-5 mx-5 items-center overflow-x-auto whitespace-nowrap lg:overflow-visible relative scrollbar-hide '>
             {items.map((item, index) => (
               <li className='list-none hover:underline cursor-pointer' key={index}>{item}</li>
             ))}

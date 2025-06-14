@@ -1,5 +1,3 @@
-import React from 'react';
-import shoe from '../assets/images/shoe4.svg'
 import LoginPrompt from './LoginPrompt';
 import heart from '../assets/icons/heart.png'
 import Carousel from 'react-multi-carousel';
@@ -53,7 +51,7 @@ const less = {
       <LoginPrompt />
       <div className='w-full grid grid-cols-2 gap-5'>
         <div>
-          <img className='object-cover w-full h-28 sm:h-40 md:h-52 lg:h-96' src={shoe} alt='shoe' />
+          <img className='object-cover w-full h-28 sm:h-40 md:h-52 lg:h-96' src={butterfly} alt='shoe' />
         </div>
         <div className='flex flex-col gap-5'>
           <div className='flex flex-col'>
@@ -67,7 +65,7 @@ const less = {
           <div className='flex justify-evenly gap-4 overflow-x-auto whitespace-nowrap lg:whitespace-normal scrollbar-hide  p-4 '>
             {Array(3).fill(0).map((_,i)=>
             <div key={i}>
-              <img src={shoe} className='size-36' />
+              <img src={butterfly} className='size-36' />
               <div className='flex flex-col items-start gap-2'>
                 <span className='text-green-600 font-bold'>Now $2.63</span>
                 <span className='text-sm text-wrap'>Nike black and white combo shoe in the what the hell </span>

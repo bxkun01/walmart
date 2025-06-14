@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
+import searchButton from '../assets/icons/search-button.png'
 
 const Search = () => {
   const products = ['banana', 'chocolate', 'apple',
-     'shirt', 'manga', 'lamp', 'chopstick', 'perfume','monkey','money','love','pants','hat'];
+     'shirt', 'manga', 'lamp', 'chopstick', 'perfume','monkey','money','love','pants','hat','legendary sword of ren'];
   
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredResults, setFilteredResults] = useState([]);
+  const [filteredResults, setFilteredResults] = useState(products);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   
   const searchBoxRef = useRef();
@@ -22,7 +23,11 @@ const Search = () => {
       product.toLowerCase().includes(term.toLowerCase())
     );
 
-    setFilteredResults(results);
+    if(results==''){
+      setFilteredResults(['No item found']);
+    }else{
+      setFilteredResults(results);
+    }
   };
 
   useEffect(() => {
@@ -49,7 +54,7 @@ const Search = () => {
         value={searchTerm}
         onClick={handleSearchToggle}
       />
-      <button className="absolute right-2 bottom-2 size-7 rounded-full bg-blue-900">🔍</button>
+      <button className="absolute right-2 bottom-2 size-7 rounded-full bg-blue-900 flex justify-center"><img src={searchButton} className='object-contain w-5'/></button>
 
       {isDropdownVisible && (
         <div className="absolute top-[45px] shadow-lg w-full h-[340px] z-[999] px-5 text-black bg-white overflow-y-auto">
