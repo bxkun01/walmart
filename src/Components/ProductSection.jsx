@@ -3,6 +3,11 @@ import wassup from '../assets/photos/wassup.png'
 import AboutItem from './AboutItem'
 import MoreProductDetails from './MoreProductDetails'
 import RatingnReview from './RatingnReview'
+import heart from '../assets/icons/heartx.png'
+import upload from '../assets/icons/upload.png'
+import zoomIn from '../assets/icons/zoom-in.png'
+import gift from '../assets/icons/gift.png'
+import freeShipping from '../assets/icons/free-shipping.png'
 
 const ProductSection = () => {
   return (
@@ -26,9 +31,9 @@ const ProductSection = () => {
           <div className='flex size-[510px] relative' >
             <img className='w-2/6 rounded-lg flex-grow hover:ring-black hover:ring-1 object-cover' src={wassup} />
             <div className='absolute top-5 right-5 flex flex-col gap-3'>
-              <span className='rounded-full  bg-white size-8 flex justify-center items-center'>@</span>
-              <span className='rounded-full  bg-white size-8 flex justify-center items-center'>@</span>
-              <span className='rounded-full  bg-white size-8 flex justify-center items-center'>@</span>
+              <span className='rounded-full  hover:ring-2 hover:ring-black cursor-pointer bg-white size-8 flex justify-center items-center'><img src={heart} className='w-5'/></span>
+              <span className='rounded-full hover:ring-2 hover:ring-black  cursor-pointer bg-white size-8 flex justify-center items-center'><img src={upload} className='w-5'/></span>
+              <span className='rounded-full hover:ring-2 hover:ring-black cursor-pointer bg-white size-8 flex justify-center items-center'><img src={zoomIn} className='w-5'/></span>
             </div>
           </div>
         </div>

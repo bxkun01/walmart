@@ -1,10 +1,27 @@
 import delivery from '../assets/photos/delivery.png'
 import shipping from '../assets/photos/shipping.png'
 import pickup from '../assets/photos/pickup.png'
+import { useState } from 'react'
+import heart from '../assets/icons/heartx.png'
+import gift from '../assets/icons/gift.png'
+import office from '../assets/icons/office.png'
+import returnD from '../assets/icons/return.png'
+
 
 const MoreProductDetails = () => {
+    const [cartCount, setCartCount] =useState(0)
+
+    const handleCartIncrementCount=()=>{
+        setCartCount(prev=>prev+1)
+    }
+
+    const handleCartDecrementCount=()=>{
+        setCartCount(prev=>prev-1)
+    }
+
     return (
-        <div className='bg-gray-50 flex flex-col p-3 divide-y divide-gray-400 gap-4 h-full sticky right-0 top-10'>
+        <div className='p-3  w-full '>
+            <div className='bg-gray-50 flex flex-col  divide-y divide-gray-400 gap-4'>
             <div className=''>
                 <p className='font-bold text-2xl'>$13.39</p>
                 <span className='text-xs'>Price when purchased online</span>
@@ -12,7 +29,16 @@ const MoreProductDetails = () => {
                     <div><span>Free shipping</span></div>
                     <div><span>Free 30-day return</span></div>
                 </div>
-                <button className='bg-blue-700 text-white font-bold w-full rounded-full text-sm hover:bg-blue-800 h-9'>Add to cart</button>
+                {cartCount==0&&(
+                     <button onClick={handleCartIncrementCount} className='bg-blue-700 text-white font-bold w-full rounded-full text-sm hover:bg-blue-800 h-9'>Add to Cart</button>
+                )}
+               {cartCount>0&&(
+                <button className='bg-blue-700 text-white font-bold w-full rounded-full text-sm
+                  h-9 flex justify-between px-5 items-center'>
+                    <button className= 'text-3xl hover:bg-black px-1' onClick={handleCartDecrementCount}>-</button><span>{cartCount} added</span>
+                    <button  className= 'text-xl hover:bg-black px-1' onClick={handleCartIncrementCount}>+</button></button>
+
+               )}
             </div>
 
             <div className='pt-2'>
@@ -43,7 +69,7 @@ const MoreProductDetails = () => {
             </div>
 
             <div className='pt-3 flex flex-col gap-1'>
-                <div className='flex gap-4'><img src='#' />
+                <div className='flex gap-4'><img src={office} className='size-4 items-center' />
                     <div className='flex flex-col gap-2'>
                         <span className='text-xs'>Sold and shipped by <a href='#' className='underline hover:no-underline
                hover:text-blue-600'>Half IT</a></span>
@@ -53,22 +79,23 @@ const MoreProductDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex gap-4'><img src='#' /><span className='text-xs'><bold>Free 60-day returns</bold> <a href='#' className='underline hover:no-underline
+                <div className='flex gap-4 items-center'><img src={returnD} className='size-5' /><span className='text-xs'><bold>Free 60-day returns</bold> <a href='#' className='underline hover:no-underline
                hover:text-blue-600'>Details</a></span> </div>
             </div>
 
 
             <div className='flex justify-between pt-4 text-xs'>
-                <div className='flex gap-4'>
-                    <img src='#' />
+                <div className='flex gap-4 items-center'>
+                    <img src={heart} className='size-4' />
                     <a href='#' className='underline hover:no-underline
                hover:text-blue-600'>Add to List</a>
                 </div>
-                <div className='flex gap-4'>
-                    <img src='#' />
+                <div className='flex gap-4 items-center'>
+                    <img src={gift} className='size-5' />
                     <a href='#' className='underline hover:no-underline
                hover:text-blue-600'>Add to registry</a>
                 </div>
+            </div>
             </div>
         </div>
     )

@@ -20,9 +20,14 @@ const Nav = ({toggleSidebar}) => {
 
 
   const [openLocationCard, setLocationCard] = useState(false)
+  const [count,setCount] = useState(0)
 
   function handleLocationCart() {
     setLocationCard(() => !openLocationCard)
+  }
+
+  const handleCartCount= (value)=>{
+    setCount(value)
   }
 
 

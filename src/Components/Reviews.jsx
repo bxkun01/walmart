@@ -1,8 +1,18 @@
 import user from '../assets/icons/user.png'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Reviews = () => {
     const [openIndex, setOpenIndex] = useState(null);
+    const [showReadMoreButton, setReadMoreButton]= useState(false);
+
+    const ref=useRef(null);
+
+    useEffect(()=>{
+        if(ref.current){
+            setReadMoreButton(ref.current.scrollHeight != ref.current.clientHeight)
+
+        }
+    },[])
 
     const reviews = [
         {
@@ -38,7 +48,7 @@ const Reviews = () => {
             Repellendus molestias sapiente numquam maxime quae quasi voluptas nam, natus aut, est unde amet quod? Omnis architecto officiis dolore, atque explicabo quas iste inventore rem earum odio? Velit, expedita doloribus?
             Iure doloremque hic eveniet nostrum voluptas quo commodi enim fugit quam temporibus consectetur ipsum amet, corrupti quasi! Temporibus, quae impedit velit sit obcaecati dolores pariatur, est quasi, quaerat eveniet sapiente.`,
         },
-        // Add more reviews if needed
+        
     ];
 
     const toggleReview = (index) => {
@@ -76,9 +86,10 @@ const Reviews = () => {
                                 <span className='font-bold'>{review.name}</span>
                             </div>
                             <div className='text-sm font-bold'>{review.title}</div>
-                            <p className={`${openIndex === index ? 'line-clamp-none' : 'line-clamp-2'} w-[550px]`}>
+                            <p className={`${openIndex === index ? 'line-clamp-none' : 'line-clamp-2'} w-[550px]`} ref={ref}>
                                 {review.content}
                             </p>
+                            
                             <button
                                 onClick={() => toggleReview(index)}
                                 className='text-xs text-left underline text-gray-600 hover:no-underline hover:text-blue-700'

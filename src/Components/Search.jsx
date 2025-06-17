@@ -54,7 +54,7 @@ const Search = () => {
         value={searchTerm}
         onClick={handleSearchToggle}
       />
-      <button className="absolute right-2 bottom-2 size-7 rounded-full bg-blue-900 flex justify-center"><img src={searchButton} className='object-contain w-5'/></button>
+      <button className="absolute right-2 bottom-2 size-7 rounded-full bg-blue-900 flex justify-center"><img src={searchButton}  className='object-contain w-5'/></button>
 
       {isDropdownVisible && (
         <div className="absolute top-[45px] shadow-lg w-full h-[340px] z-[999] px-5 text-black bg-white overflow-y-auto">
