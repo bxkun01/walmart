@@ -13,20 +13,20 @@ import { Link } from 'react-router-dom'
 import chevronUp from '../assets/icons/chevron-up.png'
 import chevronDown from '../assets/icons/chevron-down.png'
 
-const Nav = ({toggleSidebar}) => {
+const Nav = ({ toggleSidebar }) => {
   const items = ['Get it fast', 'My Items', 'Memorial', 'Dinner Solutions', 'Pharmacy Delivery',
     "Father's Day", 'Graduation', 'New Arrivals', 'Auto Services', 'Only At Walmart ', 'Registry', 'Walmart +']
 
 
 
   const [openLocationCard, setLocationCard] = useState(false)
-  const [count,setCount] = useState(0)
+  const [count, setCount] = useState(0)
 
   function handleLocationCart() {
     setLocationCard(() => !openLocationCard)
   }
 
-  const handleCartCount= (value)=>{
+  const handleCartCount = (value) => {
     setCount(value)
   }
 
@@ -69,23 +69,26 @@ const Nav = ({toggleSidebar}) => {
               </div>
             </div>
 
-            <div className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full items-center hidden sm:flex cursor-pointer gap-2'>
-              <img src={login} alt='login-icon' className='size-4' />
-              <Link to='/login'>
+            <Link to='/login'>
+              <div className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full items-center hidden sm:flex cursor-pointer gap-2'>
+                <img src={login} alt='login-icon' className='size-4' />
                 <div className='flex flex-col'>
                   <span className='text-xs'>Sign In</span><span className='font-bold text-sm'>Account</span>
                 </div>
-              </Link>
-            </div>
-
-            <div className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full cursor-pointer space-y-1 relative'>
-              <div className='relative'>
-                <img src={cart} className='size-5' />
-                <span className='absolute -top-2 right-0 bg-yellow-400 text-black size-4 flex items-center justify-center text-sm font-bold rounded-full'>0</span>
               </div>
-              <p className='text-xs'>$0.22</p>
-            </div>
+            </Link>
+
+            <Link to='/cart'>
+              <div className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full cursor-pointer space-y-1 relative'>
+                <div className='relative'>
+                  <img src={cart} className='size-5' />
+                  <span className='absolute -top-2 right-0 bg-yellow-400 text-black size-4 flex items-center justify-center text-sm font-bold rounded-full'>0</span>
+                </div>
+                <p className='text-xs'>$0.22</p>
+              </div>
+            </Link>
           </div>
+
         </nav>
 
         <div className='p-1 items-center w-full bg-blue-600 border border-transparent border-t-white px-4 text-white flex justify-between lg:hidden'>

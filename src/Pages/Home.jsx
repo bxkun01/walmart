@@ -1,6 +1,7 @@
 import React from 'react'
 import BentoGrid from '../Components/BentoGrid'
 import Products from  '../Components/Products'
+import FeaturedInVideos from '../Components/FeaturedInVideos'
 
 const Home = () => {
   return (
@@ -8,7 +9,9 @@ const Home = () => {
     <BentoGrid/>
 
     <Products/>
+    <FeaturedInVideos />
     </main>
+
   )
 }
 

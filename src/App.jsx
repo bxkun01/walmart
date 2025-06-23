@@ -10,12 +10,12 @@ import Home from './Pages/Home'
 import Registration from './Pages/Registration'
 import MainLayout from './Layout/Layout'
 import ProductSection from './Components/ProductSection'
+import Cart from './Pages/Cart'
 
 
 
 const router = createBrowserRouter([
   {
-    path: '/',
     element: <MainLayout />,
     children: [
       {
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
         path:'/product',
         element:<ProductSection />
 
+      },
+      {
+        path:'/cart',
+        element:<Cart/>
       }
     ]
   },

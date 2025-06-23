@@ -3,7 +3,8 @@ import searchButton from '../assets/icons/search-button.png'
 
 const Search = () => {
   const products = ['banana', 'chocolate', 'apple',
-     'shirt', 'manga', 'lamp', 'chopstick', 'perfume','monkey','money','love','pants','hat','legendary sword of ren'];
+     'shirt', 'manga', 'lamp', 'chopstick', 'perfume','monkey','money','love','pants','hat','legendary sword of ren', 'dream realm',
+    'gradient blue shirt','hell','heaven','god'];
   
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredResults, setFilteredResults] = useState(products);
@@ -24,7 +25,7 @@ const Search = () => {
     );
 
     if(results==''){
-      setFilteredResults(['No item found']);
+      setDropdownVisible(false)
     }else{
       setFilteredResults(results);
     }
