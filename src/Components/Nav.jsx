@@ -8,14 +8,30 @@ import heart from '../assets/icons/heart.png'
 import login from '../assets/icons/login.png'
 import Search from './Search'
 import Sidebar from './Sidebar'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import chevronUp from '../assets/icons/chevron-up.png'
 import chevronDown from '../assets/icons/chevron-down.png'
+import AddressCard from './AddressCard'
 
 const Nav = ({ toggleSidebar }) => {
   const items = ['Get it fast', 'My Items', 'Memorial', 'Dinner Solutions', 'Pharmacy Delivery',
     "Father's Day", 'Graduation', 'New Arrivals', 'Auto Services', 'Only At Walmart ', 'Registry', 'Walmart +']
+
+  const ref = useRef();
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setLocationCard(false);
+      }
+
+    }
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => document.removeEventListener('click', handleClickOutside)
+
+  }, [])
 
 
 
@@ -37,7 +53,7 @@ const Nav = ({ toggleSidebar }) => {
 
       <header className='flex flex-col fixed top-0 w-full z-[9999]'>
 
-        <nav className="bg-blue-600 h-20 flex gap-6 px-4 py-9 items-center text-white">
+        <nav className="bg-blue-700 h-20 flex gap-6 px-4 py-9 items-center text-white">
 
           <img
             src={hamburger}
@@ -45,17 +61,28 @@ const Nav = ({ toggleSidebar }) => {
             className='w-5 hidden max-sm:max-lg:flex cursor-pointer'
             onClick={toggleSidebar}
           />
-          <Link to='/'><img src={walmart} alt="icon" className='w-7' /></Link>
+          <Link to='/'><div className='w-7'><img src={walmart} alt="icon" className='w-7' /></div></Link>
 
-          <div className='flex p-1 gap-3 items-center bg-black bg-opacity-45 rounded-full hover:bg-opacity-65 max-sm:hidden max-lg:hidden px-2'>
+          <div ref={ref} className='flex p-1 gap-3 items-center bg-black bg-opacity-45 rounded-full hover:bg-opacity-65 max-sm:hidden max-lg:hidden px-2 relative'>
             <img src={phone} alt="phone-image" className='w-8' />
-            <div className='flex items-center'>
+            <div className='flex items-center' >
               <div className='flex flex-col p-1'>
                 <span className='font-bold text-sm'>How do you want your items?</span>
                 <span className='text-xs'>Sacramento, 95829 .Sacremento Supe...</span>
               </div>
-              <button className='text-2xl' onClick={handleLocationCart}><img src={openLocationCard ? chevronUp : chevronDown} className='object-contain w-5' /></button>
+              <img
+                onClick={handleLocationCart}
+                src={openLocationCard ? chevronUp : chevronDown}
+                className='object-contain w-5 cursor-pointer'
+                alt="Chevron"
+              />
             </div>
+            {openLocationCard && (
+              <AddressCard />
+
+            )}
+
+
           </div>
 
 

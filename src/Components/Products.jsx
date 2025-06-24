@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import butterfly from '../assets/images/butterfly.png'
 import categories from '../Constants/category.json'
+import Button from '../Buttons/Button';
 
 const Contents = () => {
   const responsive = {
@@ -121,8 +122,8 @@ const less = {
               <div className='absolute top-2 right-2 bg-white rounded-full '><img src={heart} className='size-7'/></div>
               <div className='flex flex-col items-start gap-2 pb-1'>
                 <span className=' font-bold'>Now $203</span>
-                <span className='text-sm text-wrap'>Premium golden multiple butterfly  </span>
-                <button className='ring-1 ring-black px-3 py-1 rounded-full hover:ring-2 text-sm font-bold'>+ Add</button>
+                <span className='text-sm text-wrap'>Premium golden multiple butterfly</span>
+                <Button name='+ Add'/>
               </div>
             </div>
           ))}

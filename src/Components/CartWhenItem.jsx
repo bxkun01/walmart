@@ -8,6 +8,7 @@ import delivery from '../assets/photos/delivery.png'
 import canon from '../assets/photos/canon.png'
 import home from '../assets/photos/home.png'
 import CartItem from './CartItem'
+import CheckOut from './CheckOut'
 
 const CartWhenItem = () => {
   const [openSections, setOpenSections] = useState({
@@ -22,7 +23,7 @@ const CartWhenItem = () => {
   };
 
   return (
-    <div>
+    <div className='flex gap-5 max-xl:justify-center'>
       <div className='flex flex-col gap-7'>
         {/* Pickup and delivery options header */}
         <div className='flex gap-2 items-center'>
@@ -68,7 +69,7 @@ const CartWhenItem = () => {
             </div>
           </div>
 
-          {/* Cart items header */}
+          
           <div className='flex justify-between items-center p-4'>
             <span className='font-medium'>2 items</span>
             <img
@@ -98,6 +99,7 @@ const CartWhenItem = () => {
           )}
         </div>
       </div>
+      <CheckOut/>
     </div>
   )
 } 

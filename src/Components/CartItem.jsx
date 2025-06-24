@@ -14,10 +14,9 @@ const CartItem = () => {
             setCartCount(prev => prev - 1)
 
         }
-
     }
     return (
-        <div className='p-4 text-sm text-gray-600 flex flex-col gap-2'>
+        <div className='p-4 text-sm text-gray-600 flex flex-col gap-2 w-full'>
             <div className='flex flex-col gap-2'>
                 <span>Sold and shipped by ReinHart</span>
                 <span className='text-blue-700 text-xs'>Free shipping</span>
@@ -26,7 +25,7 @@ const CartItem = () => {
                 <div className='flex gap-2 items-center overflow-clip '>
                     <img src={home} alt="" className='object-contain size-28' />
                     <div className='flex flex-col gap-2'>
-                        <span className='flex-wrap'>Home of the Dead from the wonderland the world is the
+                        <span className='flex-wrap w-[400px]'>Home of the Dead from the wonderland the world is the
                             kldsjfkldsjf dsfkldsj flskdf jdslkf jsdlfks djflkds fjsdlkf jdslfkdsj flkdssfj sdffsdlfjldskfjsdlkfjdsklvlkfjdslfkdsjfkldfsdklfjdslkfjdsk
                         </span>
 
