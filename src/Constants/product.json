@@ -1,0 +1,33 @@
+{
+  "name": "SmartHome LED Lamp",
+  "about": "A Wi-Fi enabled smart LED lamp with customizable brightness and color settings, compatible with Alexa and Google Assistant.",
+  "price": 34.99,
+  "pictures": [
+    { "src": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
+    { "src": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
+    { "src": "https://images.pexels.com/photos/167964/pexels-photo-167964.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" }
+  ],
+  "transportation": {
+    "available_methods": {"shipping":true, "delivery":true, "pickup":false},
+    "shipper": "QuickShip Logistics"
+  },
+  "rating": 4.5,
+  "aboutSections": [
+    {
+      "title": "Product Details",
+      "description": "Officially 100% Authenthic Half It Exclusive Branded I'm A Proud Dad Of An Awesome Daughter Funny Daddy Gift Fathers day T-Shirt. We are not the typical print shop. We put quality before profit and never cut ink to squeeze a few extra margin points. With that said, our prices are unbeatably good and super duper affordable. We put extra care into your shirt to make sure it's the perfect gift, casual day out, or to celebrate that perfect day! We will never send you a shirt that we wouldn't wear ourselves!"
+    },
+    {
+      "title": "Specifications",
+      "description":"use the hell you want you nil"
+    },
+    {
+      "title": "Directions",
+      "description": "Machine wash cold, tumble dry low. Do not bleach or iron directly on the print."
+    },
+    {
+      "title": "Warranty",
+      "description": "This product comes with a 1-year limited warranty covering manufacturing defects only."
+    }
+  ]
+}
