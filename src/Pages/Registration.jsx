@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import InputMask from 'react-input-mask';
 import walmart from '/src/assets/icons/spark-icon.svg';
 import RegistrationFooter from '../Components/RegistrationFooter';
+import { Helmet } from 'react-helmet';
 
 const Registration = () => {
   const [number, setNumber] = useState('');
 
   return (
     <>
+    <Helmet><title>Login</title></Helmet>
       <div className="flex flex-col items-center my-5 gap-5 px-4 border-b border-b-gray-300 pb-40">
         <Link to="/">
           <img src={walmart} alt="walmart logo" className="h-16" />

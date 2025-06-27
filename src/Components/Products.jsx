@@ -5,6 +5,8 @@ import 'react-multi-carousel/lib/styles.css';
 import butterfly from '../assets/images/butterfly.png'
 import categories from '../Constants/category.json'
 import Button from '../Buttons/Button';
+import product from '../Constants/product.json'
+import { Link } from 'react-router-dom';
 
 const Contents = () => {
   const responsive = {
@@ -114,9 +116,9 @@ const less = {
         <div>
           <Carousel responsive={less} itemClass='px-2'>
           {Array(15).fill(0).map((_, i) => (
-            <div
-              key={i}
-              className="rounded-md flex-shrink-0 h-full flex flex-col items-start gap-4 size-47  cursor-pointer relative "
+            
+            <div key={i}
+              className="rounded-md flex-shrink-0 h-full flex flex-col items-start gap-4  cursor-pointer relative "
             >
               <img className="object-cover" src={butterfly} draggable="false" alt={`Grocery ${i + 1}`} />
               <div className='absolute top-2 right-2 bg-white rounded-full '><img src={heart} className='size-7'/></div>
@@ -131,7 +133,44 @@ const less = {
         </div>
       </div>
 
+
+      {/* available items */}
+       <div className="space-y-5 ">
+        <div className='flex justify-between'>
+          <h1 className="font-bold text-md">Products available</h1>
+          <span className='text-xs underline cursor-pointer'>view all</span>
+        </div>
+
+        <div>
+          <Carousel responsive={less} itemClass='px-2'>
+          {product.map((item, i) => (
+            <Link key={i} to={`/product/${i}`}>
+            <div
+              
+              className="rounded-md flex-shrink-0 h-full flex flex-col items-start gap-4   cursor-pointer relative "
+            >
+              <img className="object-cover size-[240px]" src={item.pictures[0].src} draggable="false" alt={`Grocery ${i}`} />
+              <div className='absolute top-2 right-2 bg-white rounded-full '><img src={heart} className='size-7'/></div>
+              <div className='flex flex-col items-start gap-2 pb-1'>
+                <span className=' font-bold'>${item.price}</span>
+                <span className='text-sm text-wrap'>{item.name}</span>
+                <Button name='+ Add'/>
+              </div>
+            </div>
+            </Link>
+          ))}
+          </Carousel>
+        </div>
+      </div>
+
+
+      
+
     </div>
+
+
+
+
 
 
 

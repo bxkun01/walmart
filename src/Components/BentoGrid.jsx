@@ -1,48 +1,53 @@
-import photo from '../assets/photos/wassup.png';
+import pictures from '../Constants/picture.json';
 
 const BentoGrid = () => {
   return (
-    <div className="grid grid-cols-4 gap-3 p-3 px-5 pt-40 lg:pt-32">
-      <div className="flex flex-col gap-4 col-span-1">
-        <div className="aspect-video">
-          <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
+    <div className="grid grid-cols-4 gap-3 p-3 px-5 pt-40 lg:pt-32"> 
+      
+      
+      <div className="grid grid-rows-3 gap-4 col-span-1">
+        <div className="row-span-1">
+          <img className="rounded-md w-full h-full object-cover"loading="lazy"  src={pictures[0]} alt="" />
         </div>
-        <div className="aspect-[3/4]">
-          <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
+        <div className="row-span-1">
+          <img className="rounded-md w-full h-full object-cover" loading="lazy"  src={pictures[1]} alt="" />
         </div>
-        <div className="aspect-[5/5.7]"> 
-          <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
-        </div>
-      </div>
-
-      <div className="col-span-2 flex flex-col gap-4">
-        <div className="aspect-[5/2]"> 
-          <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="aspect-square">
-            <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
-          </div>
-          <div className="aspect-square"> 
-            <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
-          </div>
-        </div>
-        <div className="aspect-[15/10]">
-          <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
+        <div className="row-span-1"> 
+          <img className="rounded-md w-full h-full object-cover" loading="lazy"  src={pictures[2]} alt="" />
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 col-span-1">
-        <div className="aspect-video">
-          <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
+      {/* Center column (2 cols wide) */}
+      <div className="col-span-2 grid grid-rows-3 gap-4">
+        <div className="row-span-1">
+          <img className="rounded-md w-full h-full object-cover" loading="lazy"  src={pictures[3]} alt="" />
         </div>
-        <div className="aspect-square"> 
-          <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
+        <div className="grid grid-cols-2 gap-4 row-span-1">
+          <div>
+            <img className="rounded-md w-full h-full object-cover" loading="lazy"  src={pictures[4]} alt="" />
+          </div>
+          <div> 
+            <img className="rounded-md w-full h-full object-cover" loading="lazy"  src={pictures[5]} alt="" />
+          </div>
         </div>
-        <div className="aspect-[3/5.9]">
-          <img className="rounded-md w-full h-full object-cover" src={photo} alt="" />
+        <div className="row-span-1">
+          <img className="rounded-md w-full h-full object-cover" loading="lazy"  src={pictures[6]} alt="" />
         </div>
       </div>
+
+      {/* Right column */}
+      <div className="grid grid-rows-3 gap-4 col-span-1">
+        <div className="row-span-1">
+          <img className="rounded-md w-full h-full object-cover" loading="lazy"  src={pictures[7]} alt="" />
+        </div>
+        <div className="row-span-1"> 
+          <img className="rounded-md w-full h-full object-cover" loading="lazy"  src={pictures[8]} alt="" />
+        </div>
+        <div className="row-span-1">
+          <img className="rounded-md w-full h-full object-cover"  loading="lazy" src={pictures[9]} alt="" />
+        </div>
+      </div>
+
     </div>
   );
 };

@@ -1,33 +1,277 @@
-{
-  "name": "SmartHome LED Lamp",
-  "about": "A Wi-Fi enabled smart LED lamp with customizable brightness and color settings, compatible with Alexa and Google Assistant.",
-  "price": 34.99,
+[
+    {
+        "name": "SmartHome LED Lamp",
+        "about": "A Wi-Fi enabled smart LED lamp with customizable brightness and color settings, compatible with Alexa and Google Assistant.",
+        "price": 34.99,
+        "pictures": [
+            {
+                "src": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            },
+            {
+                "src": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            },
+            {
+                "src": "https://images.pexels.com/photos/167964/pexels-photo-167964.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            }
+        ],
+        "transportation": {
+            "available_methods": {
+                "shipping": true,
+                "delivery": true,
+                "pickup": false
+            },
+            "shipper": "QuickShip Logistics"
+        },
+        "rating": 4.5,
+        "aboutSections": [
+            {
+                "title": "Product Details",
+                "description": "Officially 100% Authenthic Half It Exclusive Branded I'm A Proud Dad Of An Awesome Daughter Funny Daddy Gift Fathers day T-Shirt. We are not the typical print shop. We put quality before profit and never cut ink to squeeze a few extra margin points. With that said, our prices are unbeatably good and super duper affordable. We put extra care into your shirt to make sure it's the perfect gift, casual day out, or to celebrate that perfect day! We will never send you a shirt that we wouldn't wear ourselves!"
+            },
+            {
+                "title": "Specifications",
+                "description": "use the hell you want you nil"
+            },
+            {
+                "title": "Directions",
+                "description": "Machine wash cold, tumble dry low. Do not bleach or iron directly on the print."
+            },
+            {
+                "title": "Warranty",
+                "description": "This product comes with a 1-year limited warranty covering manufacturing defects only."
+            }
+        ]
+    },
+    {
+        "name": "SmartFitness Tracker",
+        "about": "A sleek fitness tracker that monitors heart rate, sleep, and step count. Features a waterproof design and 7-day battery life.",
+        "price": 59.99,
+        "pictures": [
+            {
+                "src": "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            },
+            {
+                "src": "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            },
+            {
+                "src": "https://images.pexels.com/photos/4039447/pexels-photo-4039447.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            }
+        ],
+        "transportation": {
+            "available_methods": {
+                "shipping": true,
+                "delivery": false,
+                "pickup": true
+            },
+            "shipper": "BlueArrow Delivery"
+        },
+        "rating": 4.2,
+        "aboutSections": [
+            {
+                "title": "Product Details",
+                "description": "A high-tech fitness band designed for everyday use, crafted with skin-friendly material and built-in sensors to give you insights into your daily activity and wellness. Syncs easily with both Android and iOS."
+            },
+            {
+                "title": "Specifications",
+                "description": "Battery life: 7 days | Water Resistance: IP68 | Connectivity: Bluetooth 5.0"
+            },
+            {
+                "title": "Directions",
+                "description": "Charge fully before first use. Wear snugly for accurate heart rate monitoring."
+            },
+            {
+                "title": "Warranty",
+                "description": "Includes a 6-month warranty against hardware defects."
+            }
+        ]
+    },
+    {
+        "name": "Aroma Diffuser Lamp",
+        "about": "A 2-in-1 essential oil diffuser and night lamp with soft LED lighting and ultrasonic misting technology.",
+        "price": 24.95,
+        "pictures": [
+            {
+                "src": "https://images.pexels.com/photos/965990/pexels-photo-965990.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            },
+            {
+                "src": "https://images.pexels.com/photos/932577/pexels-photo-932577.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            },
+            {
+                "src": "https://images.pexels.com/photos/4210375/pexels-photo-4210375.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            }
+        ],
+        "transportation": {
+            "available_methods": {
+                "shipping": true,
+                "delivery": true,
+                "pickup": true
+            },
+            "shipper": "ZenFlow Express"
+        },
+        "rating": 4.7,
+        "aboutSections": [
+            {
+                "title": "Product Details",
+                "description": "Combining aromatherapy with soft ambient lighting, this diffuser helps create a relaxing atmosphere in any room. Great for bedrooms, offices, or yoga sessions."
+            },
+            {
+                "title": "Specifications",
+                "description": "Tank Capacity: 300ml | LED Colors: 7 | Auto Shut-Off: Yes"
+            },
+            {
+                "title": "Directions",
+                "description": "Add water and a few drops of essential oil. Turn on and select misting mode."
+            },
+            {
+                "title": "Warranty",
+                "description": "Backed by a 1-year replacement warranty."
+            }
+        ]
+    },
+    {
+        "name": "ErgoComfort Mesh Office Chair",
+        "about": "An ergonomic office chair with adjustable height, lumbar support, and breathable mesh backrest for long sitting hours.",
+        "price": 129.99,
+        "pictures": [
+            {
+                "src": "https://images.pexels.com/photos/320557/pexels-photo-320557.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            },
+            {
+                "src": "https://images.pexels.com/photos/245032/pexels-photo-245032.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            },
+            {
+                "src": "https://images.pexels.com/photos/776656/pexels-photo-776656.jpeg?auto=compress&cs=tinysrgb&h=500&w=500"
+            }
+        ],
+        "transportation": {
+            "available_methods": {
+                "shipping": true,
+                "delivery": true,
+                "pickup": false
+            },
+            "shipper": "SitRight Courier"
+        },
+        "rating": 4.6,
+        "aboutSections": [
+            {
+                "title": "Product Details",
+                "description": "Designed for professionals who value comfort, this office chair features a breathable backrest, a cushioned seat, and a tilt lock for adjustable recline angles."
+            },
+            {
+                "title": "Specifications",
+                "description": "Material: Mesh/Fabric | Max Weight: 120kg | Recline Angle: 90-135°"
+            },
+            {
+                "title": "Directions",
+                "description": "Assemble using the included tools. Adjust height and tilt before use."
+            },
+            {
+                "title": "Warranty",
+                "description": "Includes a 2-year warranty for structural components and 1-year for fabric."
+            }
+        ]
+    },
+    {
+  "name": "CleanBright Electric Toothbrush",
+  "about": "A rechargeable toothbrush with sonic vibration, 3 cleaning modes, and a smart 2-minute timer for dentist-level hygiene.",
+  "price": 39.00,
   "pictures": [
     { "src": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
-    { "src": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
-    { "src": "https://images.pexels.com/photos/167964/pexels-photo-167964.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" }
+    { "src": "https://images.pexels.com/photos/6621423/pexels-photo-6621423.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
+    { "src": "https://images.pexels.com/photos/6621453/pexels-photo-6621453.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" }
   ],
   "transportation": {
-    "available_methods": {"shipping":true, "delivery":true, "pickup":false},
-    "shipper": "QuickShip Logistics"
+    "available_methods": { "shipping": true, "delivery": true, "pickup": true },
+    "shipper": "HygieneGo Logistics"
   },
-  "rating": 4.5,
+  "rating": 4.8,
   "aboutSections": [
     {
       "title": "Product Details",
-      "description": "Officially 100% Authenthic Half It Exclusive Branded I'm A Proud Dad Of An Awesome Daughter Funny Daddy Gift Fathers day T-Shirt. We are not the typical print shop. We put quality before profit and never cut ink to squeeze a few extra margin points. With that said, our prices are unbeatably good and super duper affordable. We put extra care into your shirt to make sure it's the perfect gift, casual day out, or to celebrate that perfect day! We will never send you a shirt that we wouldn't wear ourselves!"
+      "description": "Designed by dental experts, this toothbrush gives you a complete oral clean with minimal effort. Replaceable heads and IPX7 waterproofing make it ideal for home and travel."
     },
     {
       "title": "Specifications",
-      "description":"use the hell you want you nil"
+      "description": "Battery: 30-day life | Modes: Clean, Sensitive, Massage | Waterproof: IPX7"
     },
     {
       "title": "Directions",
-      "description": "Machine wash cold, tumble dry low. Do not bleach or iron directly on the print."
+      "description": "Charge fully before use. Brush each quadrant for 30 seconds as directed by timer pulses."
     },
     {
       "title": "Warranty",
-      "description": "This product comes with a 1-year limited warranty covering manufacturing defects only."
+      "description": "Comes with 1-year product warranty and 6 months on brush heads."
+    }
+  ]
+},
+{
+  "name": "LuminoView Mini Projector",
+  "about": "Compact portable projector that supports 1080p input, built-in speaker, and HDMI/USB connectivity. Ideal for home theater or presentations.",
+  "price": 89.95,
+  "pictures": [
+    { "src": "https://images.pexels.com/photos/1181287/pexels-photo-1181287.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
+    { "src": "https://images.pexels.com/photos/127905/pexels-photo-127905.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
+    { "src": "https://images.pexels.com/photos/374703/pexels-photo-374703.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" }
+  ],
+  "transportation": {
+    "available_methods": { "shipping": true, "delivery": true, "pickup": false },
+    "shipper": "VisionPort Courier"
+  },
+  "rating": 4.4,
+  "aboutSections": [
+    {
+      "title": "Product Details",
+      "description": "This projector fits in your palm and delivers a clear, vibrant image up to 120 inches wide. Perfect for outdoor movie nights or quick setup presentations at the office."
+    },
+    {
+      "title": "Specifications",
+      "description": "Resolution: Supports 1080p | Ports: HDMI, USB, microSD | Projection: up to 120”"
+    },
+    {
+      "title": "Directions",
+      "description": "Place 6–8 feet away from the surface. Use keystone dial to correct image angle."
+    },
+    {
+      "title": "Warranty",
+      "description": "Protected with a 2-year limited warranty on hardware defects."
+    }
+  ]
+},
+{
+  "name": "SoundPulse Wireless Earbuds",
+  "about": "High-fidelity Bluetooth 5.1 earbuds with noise isolation, deep bass, and touch controls. Comes with a compact charging case.",
+  "price": 49.99,
+  "pictures": [
+    { "src": "https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
+    { "src": "https://images.pexels.com/photos/3394665/pexels-photo-3394665.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" },
+    { "src": "https://images.pexels.com/photos/3756691/pexels-photo-3756691.jpeg?auto=compress&cs=tinysrgb&h=500&w=500" }
+  ],
+  "transportation": {
+    "available_methods": { "shipping": true, "delivery": false, "pickup": true },
+    "shipper": "AirGo Express"
+  },
+  "rating": 4.3,
+  "aboutSections": [
+    {
+      "title": "Product Details",
+      "description": "Experience crisp sound and enhanced call clarity with SoundPulse wireless earbuds. Designed for daily use, workouts, and commutes. Comes with 3 silicone ear tips for the perfect fit."
+    },
+    {
+      "title": "Specifications",
+      "description": "Battery life: 6 hours per charge | Case battery: 18 hours | Waterproof: IPX4"
+    },
+    {
+      "title": "Directions",
+      "description": "Remove from case to auto-pair. Use touch controls to play/pause, skip tracks, and answer calls."
+    },
+    {
+      "title": "Warranty",
+      "description": "Includes a 1-year limited warranty against manufacturing faults."
     }
   ]
 }
+
+
+
+
+]

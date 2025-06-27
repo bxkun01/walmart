@@ -1,36 +1,58 @@
-import React, { useState } from 'react'
-import AboutItem from './AboutItem'
-import MoreProductDetails from './MoreProductDetails'
-import RatingnReview from './RatingnReview'
-import heart from '../assets/icons/heartx.png'
-import upload from '../assets/icons/upload.png'
-import zoomIn from '../assets/icons/zoom-in.png'
-import product from '../Constants/product.json'
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+import AboutItem from '../Components/AboutItem';
+import MoreProductDetails from '../Components/MoreProductDetails';
+import RatingnReview from '../Components/RatingnReview';
+
+import heart from '../assets/icons/heartx.png';
+import upload from '../assets/icons/upload.png';
+import zoomIn from '../assets/icons/zoom-in.png';
+
+import productData from '../Constants/product.json';
 import ReactStars from "react-rating-stars-component";
+import PageNotFound from '../Components/PageNotFound';
+import { Helmet } from 'react-helmet';
+
+const Product = () => {
+  const { id } = useParams();
+  const index = parseInt(id);
+  const product = productData[index];
+
+  if (!product) {
+    return (
+      <PageNotFound />
 
 
-const ProductSection = () => {
+    );
+  }
+
+ 
+
   const [currentImg, setCurrentImg] = useState(product.pictures[0].src);
 
+
   return (
+    <>
+     <Helmet>
+    <title>{product.name}</title>
+  </Helmet>
     <div className='flex w-full h-full mt-[120px]'>
       <div className='flex p-5 flex-col gap-10'>
         <div className='flex gap-6'>
           <div className='flex gap-2'>
 
-
             <div className='flex flex-col w-20 gap-2'>
               {product.pictures.map((picture, i) => (
                 <img
                   key={i}
-                  className='rounded-md w-[75px] h-[75px] object-cover'
+                  className='rounded-md w-[75px] h-[75px] object-cover cursor-pointer'
                   src={picture.src}
                   alt={`Image ${i + 1}`}
                   onMouseEnter={() => setCurrentImg(picture.src)}
                 />
               ))}
             </div>
-
 
             <div className='flex w-[510px] relative'>
               <img
@@ -56,7 +78,7 @@ const ProductSection = () => {
           <div className='flex flex-col divide-y divide-gray-300'>
             <div className='flex flex-col gap-3 pb-5'>
               <a href='#' className='text-xs underline text-slate-600 hover:no-underline hover:text-blue-600'>
-                {product.transportation.shipper}
+                {product.transportation?.shipper}
               </a>
               <p className='font-semibold text-[15px]'>{product.name}</p>
               <div className='flex gap-1 items-center'>
@@ -74,12 +96,12 @@ const ProductSection = () => {
               </div>
             </div>
 
-            <div className='py-4 flex flex-col gap-2'>
+            <div className='py-4 flex flex-col gap-2 items-start'>
               <p className='font-bold text-sm'>About this item</p>
               <p className='text-xs text-gray-700'>{product.about}</p>
-              <a href='#' className='text-xs underline text-gray-600 hover:no-underline hover:text-blue-700'>
+              <button className='text-xs underline text-gray-600 hover:no-underline hover:text-blue-700'>
                 View full item details
-              </a>
+              </button>
             </div>
 
             <div className='py-4 flex flex-col gap-2'>
@@ -108,7 +130,8 @@ const ProductSection = () => {
 
       <MoreProductDetails product={product} />
     </div>
-  )
-}
+    </>
+  );
+};
 
-export default ProductSection
+export default Product;
