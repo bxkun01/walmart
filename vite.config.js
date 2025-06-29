@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-
-// https://vite.dev/config/
-export default defineConfig({
-  base:'/walmart/',
-  plugins: [react()],
+export default defineConfig(({ command }) => {
+  return {
+    base: command === 'build' ? '/walmart/' : '/',
+    plugins: [react()]
+  }
 })
