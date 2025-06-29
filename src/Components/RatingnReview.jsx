@@ -1,5 +1,4 @@
 import butterfly from '../assets/images/butterfly.png'
-import user from '../assets/icons/user.png'
 import apo from '../assets/photos/apothecary.png'
 import Reviews from './Reviews'
 

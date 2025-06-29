@@ -1,7 +1,6 @@
-// App.jsx
 import React from 'react'
 import {
-  createBrowserRouter,
+  createHashRouter, 
   RouterProvider,
 } from 'react-router-dom'
 
@@ -11,9 +10,7 @@ import MainLayout from './Layout/Layout'
 import Product from './Pages/Product'
 import Cart from './Pages/Cart'
 
-
-
-const router = createBrowserRouter([
+const router = createHashRouter([  
   {
     element: <MainLayout />,
     children: [
@@ -22,13 +19,12 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path:'/product/:id',
-        element:<Product />
-
+        path: '/product/:id',
+        element: <Product />
       },
       {
-        path:'/cart',
-        element:<Cart/>
+        path: '/cart',
+        element: <Cart />
       }
     ]
   },

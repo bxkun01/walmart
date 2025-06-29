@@ -56,7 +56,7 @@ const Reviews = () => {
     };
 
     return (
-        <div>
+        <div className='flex flex-col'>
             <span className='text-sm font-bold'>Showing 1-3 of {reviews.length} reviews</span>
             <div className='flex flex-col gap-5 divide-y divide-gray-500'>
                 {reviews.map((review, index) => (

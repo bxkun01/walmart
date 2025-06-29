@@ -24,7 +24,7 @@ const Section = ({ title, description }) => {
 
 const AboutItem = ({ detail }) => {
   return (
-    <div className="divide-y-2 divide-gray-300">
+    <div className="divide-y-2 divide-gray-300 min-w-fit">
       <div className="font-bold text-md pb-4">About this item</div>
       {detail.map((section, idx) => (
         <Section

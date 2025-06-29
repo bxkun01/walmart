@@ -4,6 +4,7 @@ import Products from '../Components/Products'
 import FeaturedInVideos from '../Components/FeaturedInVideos'
 import { Helmet } from 'react-helmet'
 
+
 const Home = () => {
   return (
     <>
