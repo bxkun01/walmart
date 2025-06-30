@@ -10,7 +10,7 @@ import home from '../assets/photos/home.png'
 import CartItem from './CartItem'
 import CheckOut from './CheckOut'
 
-const CartWhenItem = () => {
+const CartWhenItem = ({cart}) => {
   const [openSections, setOpenSections] = useState({
     options: false,
     items: false,
@@ -18,14 +18,19 @@ const CartWhenItem = () => {
 
 
 
+
   const toggleSection = (key) => {
     setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
+  const carts=cart;
+
+  console.log(cart)
   return (
     <div className='flex gap-5 max-xl:justify-center'>
       <div className='flex flex-col gap-7'>
-        {/* Pickup and delivery options header */}
+
+        
         <div className='flex gap-2 items-center'>
           <img src={walmartPhone} className='w-7' />
           <span className='font-bold text-xl'>Pickup and delivery options</span>
@@ -60,7 +65,7 @@ const CartWhenItem = () => {
         {/* Shipping summary and items dropdown */}
         <div className='border-1 border-gray-200 shadow-md'>
           <div className='flex gap-5 bg-blue-50 p-5'>
-            <img src={shipping} className='w-12 object-contain' />
+            <img src={delivery} className='w-12 object-contain' />
             <div className='flex flex-col gap-2'>
               <span className='font-bold text-xl '>
                 Shipping, arrives between tomorrow, Jun 23 – Tue, Jun 24
@@ -80,17 +85,17 @@ const CartWhenItem = () => {
           </div>
 
           {openSections.items == false && (
-            <div className='flex gap-2 flex-wrap'>
-              <img src={home} alt="items" className='size-20' />
-              <img src={canon} className='size-20' alt="items" />
+            <div className='flex gap-2 flex-wrap p-3'>
+              {cart.map((item)=><img src={item.pictures[0].src} alt="items" className='size-20 object-cover'/> )}
+              
             </div>
           )
           }
 
           {openSections.items && (
             <div>
-              <CartItem/>
-              <CartItem/>
+              {carts.map((cart,i)=><CartItem item={cart}/>)}
+              
            
             
             </div>

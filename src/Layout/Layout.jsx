@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Footer from '../Components/Footer';
 import Feedback from '../Components/Feedback';
 import ScrollToTop from '../Components/ScrollToTop'; 
+import { CartProvider } from "../context/CartContext";
 
 const Layout = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -26,8 +27,10 @@ const Layout = () => {
       <ScrollToTop />
       <Sidebar visible={sidebarVisible} ref={sidebarRef} />
       <div className={`transition-all duration-300 overflow-hidden ${sidebarVisible ? 'ml-72' : 'ml-0'}`}>
+        <CartProvider>
         <Nav toggleSidebar={() => setSidebarVisible(!sidebarVisible)} />
         <Outlet />
+        </CartProvider>
       </div>
       <Feedback />
       <Footer />

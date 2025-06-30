@@ -1,7 +1,7 @@
 import { useState } from "react"
 import home from '../assets/photos/home.png'
 
-const CartItem = () => {
+const CartItem = ({item ,i}) => {
     const [cartCount, setCartCount] = useState(0)
 
     const handleCartIncrementCount = () => {
@@ -16,22 +16,22 @@ const CartItem = () => {
         }
     }
     return (
-        <div className='p-4 text-sm text-gray-600 flex flex-col gap-2 w-full'>
+        <div className='p-4 text-sm text-gray-600 flex flex-col gap-2 w-full' >
             <div className='flex flex-col gap-2'>
-                <span>Sold and shipped by ReinHart</span>
+                <span>Sold and shipped by {item.transportation.shipper}</span>
                 <span className='text-blue-700 text-xs'>Free shipping</span>
             </div>
             <div className='flex gap-5 justify-evenly items-center'>
                 <div className='flex gap-2 items-center overflow-clip '>
-                    <img src={home} alt="" className='object-contain size-28' />
+                    <img src={item.pictures[0].src} alt="" className='object-contain size-28' />
                     <div className='flex flex-col gap-2'>
-                        <span className='flex-wrap w-[400px]'>Home of the Dead from the wonderland the world is the
-                            kldsjfkldsjf dsfkldsj flskdf jdslkf jsdlfks djflkds fjsdlkf jdslfkdsj flkdssfj sdffsdlfjldskfjsdlkfjdsklvlkfjdslfkdsjfkldfsdklfjdslkfjdsk
+                        <span className='flex-wrap w-[400px]'>
+                            {item.about}
                         </span>
 
 
                         <div className='flex  gap-5 text-green-600 sm:hidden items-center'>
-                            <span className='text-lg font-bold'>$44,000</span>
+                            <span className='text-lg font-bold'>${item.price}</span>
                             <span className='line-through text-gray-500'>$50</span>
                             <div className='whitespace-nowrap'><span className='bg-green-100 text-xs p-1'>You save</span> $6 </div>
                         </div>
@@ -47,7 +47,7 @@ const CartItem = () => {
 
 
                 <div className='flex flex-col gap-2 text-green-600 max-sm:hidden'>
-                    <span className='text-lg font-bold'>$44,000</span>
+                    <span className='text-lg font-bold'>${item.price}</span>
                     <span className='line-through text-gray-500'>$50</span>
                     <div className='whitespace-nowrap'><span className='bg-green-100 text-xs p-1'>You save</span> $6 </div>
                 </div>

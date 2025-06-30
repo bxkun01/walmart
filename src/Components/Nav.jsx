@@ -3,7 +3,7 @@ import phone from '/src/assets/icons/image.png'
 import hamburger from '/src/assets/icons/hamburger.svg'
 import Department from '../Buttons/Department'
 import Services from '../Buttons/Services'
-import cart from '../assets/icons/shopping-cart.png'
+import cartpic from '../assets/icons/shopping-cart.png'
 import heart from '../assets/icons/heart.png'
 import login from '../assets/icons/login.png'
 import Search from './Search'
@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom'
 import chevronUp from '../assets/icons/chevron-up.png'
 import chevronDown from '../assets/icons/chevron-down.png'
 import AddressCard from './AddressCard'
+import { CartContext } from '../context/CartContext'
+import { useContext } from 'react'
 
 const Nav = ({ toggleSidebar }) => {
   const items = ['Get it fast', 'My Items', 'Memorial', 'Dinner Solutions', 'Pharmacy Delivery',
@@ -46,6 +48,8 @@ const Nav = ({ toggleSidebar }) => {
     setCount(value)
   }
 
+
+  const {cart}= useContext(CartContext);
 
 
   return (
@@ -108,8 +112,8 @@ const Nav = ({ toggleSidebar }) => {
             <Link to='/cart'>
               <div className='hover:bg-black hover:bg-opacity-55 p-2 rounded-full cursor-pointer space-y-1 relative'>
                 <div className='relative'>
-                  <img src={cart} className='size-5' />
-                  <span className='absolute -top-2 right-0 bg-yellow-400 text-black size-4 flex items-center justify-center text-sm font-bold rounded-full'>0</span>
+                  <img src={cartpic} className='size-5' />
+                  <span className='absolute -top-2 right-0 bg-yellow-400 text-black size-4 flex items-center justify-center text-sm font-bold rounded-full'>{cart.length}</span>
                 </div>
                 <p className='text-xs'>$0.22</p>
               </div>

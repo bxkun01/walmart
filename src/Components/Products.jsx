@@ -154,7 +154,7 @@ const less = {
               <div className='flex flex-col items-start gap-2 pb-1'>
                 <span className=' font-bold'>${item.price}</span>
                 <span className='text-sm text-wrap'>{item.name}</span>
-                <Button name='+ Add'/>
+                <Button name='+ Add' item={item}/>
               </div>
             </div>
             </Link>
